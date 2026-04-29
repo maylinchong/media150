@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scene 2 — Slowness</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+    color: white;
+    font-family: Helvetica, sans-serif;
+  }
+  .bg {
+    position: fixed; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; filter: brightness(30%); z-index: -1;
+  }
+
+
+  h1 {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 200;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fade 1.5s forwards;
+  }
+
+  .story {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 480px;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  .line {
+    opacity: 0;
+    animation: fade 1.5s forwards;
+  }
+
+  .delay1 { animation-delay: 0.5s; }
+  .delay2 { animation-delay: 1.5s; }
+  .delay3 { animation-delay: 2.5s; }
+  .delay4 { animation-delay: 3.5s; }
+  .delay5 { animation-delay: 4.5s; }
+
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .option {
+    position: absolute;
+    width: 160px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    animation: fade 1.5s forwards;
+  }
+
+  .opt1 { animation-delay: 5.5s; }
+  .opt2 { animation-delay: 6s; }
+  .opt3 { animation-delay: 6.5s; }
+
+  .circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.5);
+    transition: 0.3s;
+  }
+
+  .circle:hover {
+    transform: scale(1.05);
+    border-color: white;
+  }
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .label {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+
+<body>
+  
+<img src="background1.jpeg" class="bg">
+
+<h1>Slowness</h1>
+
+<div class="story">
+  <p class="line delay1">You slow down without meaning to.</p>
+  <p class="line delay2">Everyone else moves like they’re late for something.</p>
+  <p class="line delay3">You feel stuck in a different speed.</p>
+  <p class="line delay4">People brush past you, annoyed.</p>
+  <p class="line delay5">Do you match their pace, or move at your own?</p>
+</div>
+
+<div class="option opt1" style="top: 60%; left: 15%;" onclick="location.href='lose.html'">
+  <div class="circle"><img src="speedup.jpg"></div>
+  <p class="label">Speed Up</p>
+</div>
+
+<div class="option opt2" style="top: 40%; left: 42%;" onclick="location.href='win.html'">
+  <div class="circle"><img src="shortcut.jpg"></div>
+  <p class="label">Take Shortcut</p>
+</div>
+
+<div class="option opt3" style="top: 60%; left: 70%;" onclick="location.href='win.html'">
+  <div class="circle"><img src="accept.jpg"></div>
+  <p class="label">Accept Pace</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Survive 3rd Ave — Intro</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+    color: white;
+    font-family: Helvetica, sans-serif;
+  }
+
+  video.bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(35%);
+    z-index: -1;
+  }
+
+  h1 {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 200;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fade 1.5s forwards;
+  }
+
+  .story {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.5rem;
+  }
+
+  .line {
+    opacity: 0;
+    animation: fade 1.5s forwards;
+  }
+
+  .delay1 { animation-delay: 0.5s; }
+  .delay2 { animation-delay: 1.5s; }
+  .delay3 { animation-delay: 2.5s; }
+  .delay4 { animation-delay: 3.5s; }
+  .delay5 { animation-delay: 4.5s; }
+  .delay6 { animation-delay: 5.5s; }
+
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .buttons {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    animation: fade 2s forwards;
+    animation-delay: 6.5s;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 0.8rem;
+  }
+
+  .btn:hover {
+    background: white;
+    color: black;
+  }
+</style>
+</head>
+
+<body>
+
+<video class="bg" autoplay muted loop src="skybridge.mp4"></video>
+
+<h1>Survive 3rd Ave</h1>
+
+<div class="story">
+  <p class="line delay1">It’s 9:47 AM at Hunter College.</p>
+  <p class="line delay2">You step onto the skybridge above Lexington Ave.</p>
+  <p class="line delay3">Students rush past you, the floor shaking under the crowd.</p>
+  <p class="line delay4">Your chest tightens for a moment.</p>
+  <p class="line delay5">Before you cross, you need to find your footing.</p>
+  <p class="line delay6">This is where your day begins.</p>
+</div>
+
+<div class="buttons">
+  <a href="scene1.html" class="btn">Start</a>
+  <a href="homework8.html" class="btn">Assignment</a>
+  <a href="index.html" class="btn">Home</a>
+</div>
+
+</body>
+</html>
+
