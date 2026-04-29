@@ -4,79 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-</head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
     <style>
+    
+        body {
+            background: #fbe7f2;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1.2s ease-in-out;
+            cursor: url(cursor.png) 0 48, auto;
+
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         h1 {
-            color: palevioletred;
-          }
-            h2 {
-                color: rgb(229, 112, 200);
-            }
-              h3 {
-                color: rgb(229, 112, 200);
-            }
-            body{
-                background-color: rgb(239, 186, 213);
-            }
-              
-    </style>
-    <h1> Maylin Chong - Lab 5 
-    </h1>
-<body>
-    <image src="me.jpg" width="200"></image>
-</body> 
-    <h2> Creative statement </h2>
-         <p> Hi, I am Maylin. I am a freshman planning to major in graphic design, with a strong interest in visual marketing and how design influences the way people see and connect with brands. I am drawn to design because it combines creativity with communication. I enjoy working with visual elements like typography, color, layout, and imagery to create designs that are eye catching but also meaningful. The type of work I want to create includes branding, posters, advertising, and social media content, where visuals play a key role in shaping perception and delivering a message quickly and clearly. Visual marketing interests me because it requires thinking about both creativity and audience, not just making something look good.
-             Outside of digital design, I enjoy creative activities such as scrapbooking, lettering, fashion, and photography. These interests influence my design process by encouraging experimentation with composition, texture, and style. I like taking photos with my digital camera and my phone, and I enjoy posting aesthetic images on Instagram as a way to practice visual storytelling and create cohesive visuals. I am inspired by fashion and beauty branding, magazine layouts, and everyday visuals found in digital media and advertising. Through my work, I want to explore themes of identity, aesthetics, and communication while continuing to develop my creative voice and technical skills as a designer.
-         </p>
-    <h3> Reading responses </h3>
-    Reading 1:
-    <br><br>
-        ✧<a href="reading1.html">"In Plato's Cave" from On Photography by Susan Sontag
-         </a>
-    <br><br>
-    Reading 2:
-    <br><br>
-        ✧<a href="reading2.html">"With 'AI slop' distorting our reality, the world is sleepwalking into disaster" by Nesrine Malik
-         </a>
+            text-align: center;
+            margin-top: 40px;
+            font-family: 'Pinyon Script', cursive;
+            font-size: 70px;
+            color: #d97aaa;
+        }
 
-    <br>
+        h2, h3 {
+            text-align: center;
+            margin-top: 40px;
+            font-family: 'Pinyon Script', cursive;
+            font-size: 45px;
+            color: #d97aaa;
+        }
 
-    <h3> Homeworks </h3>
-    <p>
-    Homework 2:
-    </p>
-        ✧<a href="homework2.html">Cropping and Resizing & Tonal Range 
-         </a>
-    <br><br>
-    Homework 3:
-    <br><br>
-        ✧<a href="dof.html">Depth of Field Exercises
-    <br><br>
-        ✧<a href="field_blur.html"> Field Blur Exercise 
-        </a>
-    <br><br>
-        ✧<a href="camera_raw.html"> Camera Raw Fix
-        </a>
-    <br><br>
-    Homework 4:
-    <br><br>
-        ✧<a href="homework4.html">Social Campaign - Photomontage
-        </a>
-    <br><br>
-    Homework 5:
-    <br><br>
-        ✧<a href="homework5.html">Vector Emotive Eye
-        </a>
-    <br><br>
-    Homework 6:
-    <br><br>
-        ✧<a href="homework6.html">Color & Pattern
-        </a>
-    <br><br>
-    Oral Presentation:
-    <br><br>
-        ✧<a href="oralpresentation.html"> Oral presentation slideshow
-        </a>
+        .content-box {
+            background: #ffffff;
+            width: 85%;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+
+        }
+
+        @keyframes softAppear {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        p {
+            width: 80%;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+            color: #444;
+        }
+
+        .photo-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .photo-container img {
+            width: 260px;
+            border-radius: 15px;
+            border: 6px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+            padding: 18px;
+            background-image: url("lace.png");
+            background-size: 140px;
+            background-repeat: round;
+            background-origin: border-box;
+            background-clip: padding-box;
+
+            transition: 0.3s;
+        }
+
+        .photo-container img:hover {
+            transform: scale(1.03) rotate(1deg);
+        }
+
+        a {
+            color: #d97aaa;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: white;
+            background-color: #e8a8c9;
+            padding: 4px 8px;
+            border-radius: 8px;
+            box-shadow: 0 0 12px #f3c7dd;
+        }
+
+        .section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .bow-divider {
+            width: 100%;
+            text-align: center;
+            margin: 40px 0;
+            font-size: 40px;
+            color: #e7a7c7;
+            font-family: 'Pinyon Script', cursive;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: pink;
+            border-radius: 50%;
+            opacity: 0.7;
+            pointer-events: none;
+            animation: fade 0.6s linear;
+        }
+
+        @keyframes fade {
+            from { transform: scale(1); opacity: 0.7; }
+            to { transform: scale(0); opacity: 0; }
+        }
+
+        .hover-heart {
+            position: relative;
+            width: 230px; 
+            height: 230px; 
+            margin: 40px auto 70px auto; 
+        }
+
+        .heart {
+            width: 230px; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.3s ease;
+        }
+
+.heart.open {
+    opacity: 0;
+}
+
+.hover-heart:hover .open {
+    opacity: 1;
+}
+
+.hover-heart:hover .closed {
+    opacity: 0;
+}
+
         
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Maylin Chong - Lab 5</h1>
+
+     <div class="hover-heart">
+        <img src="heart-closed.png" class="heart closed">
+        <img src="heart-open.png" class="heart open">
+    </div>
+
+    <div class="content-box">
+
+        <h2>Creative Statement</h2>
+        <p>
+            Hi, I am Maylin. I am a freshman planning to major in graphic design, with a strong interest in visual marketing and how design influences the way people see and connect with brands. I am drawn to design because it combines creativity with communication.
+            <br><br>
+            Outside of digital design, I enjoy creative activities such as scrapbooking, lettering, fashion, and photography. These interests influence my design process by encouraging experimentation with composition, texture, and style.
+        </p>
+
+        <div class="bow-divider">♡</div>
+
+        <h2>Reading Responses</h2>
+        <div class="section">
+            ✧ <a href="reading1.html">"In Plato's Cave" - Susan Sontag</a>
+            <br><br>
+            ✧ <a href="reading2.html">"With 'AI slop' distorting our reality..." - Nesrine Malik</a>
+        </div>
+
+        <div class="bow-divider">♡</div>
+
+        <h2>Homeworks</h2>
+        <div class="section">
+            Homework 2:
+            <br><br>
+            ✧ <a href="homework2.html">Cropping and Resizing & Tonal Range</a>
+            <br><br><br>
+
+            Homework 3:
+            <br><br>
+            ✧ <a href="dof.html">Depth of Field Exercises</a>
+            <br><br>
+            ✧ <a href="field_blur.html">Field Blur Exercise</a>
+            <br><br>
+            ✧ <a href="camera_raw.html">Camera Raw Fix</a>
+            <br><br><br>
+
+            Homework 4:
+            <br><br>
+            ✧ <a href="homework4.html">Social Campaign - Photomontage</a>
+            <br><br><br>
+
+            Homework 5:
+            <br><br>
+            ✧ <a href="homework5.html">Vector Emotive Eye</a>
+            <br><br><br>
+
+            Homework 6:
+            <br><br>
+            ✧ <a href="homework6.html">Color & Pattern</a>
+            <br><br><br>
+            
+            Homework 8:
+            <br><br>
+            ✧ <a href="homework8.html">Interactive Story</a>
+            <br><br><br>
+
+            Oral Presentation:
+            <br><br>
+            ✧ <a href="oralpresentation.html">Oral Presentation Slideshow</a>
+
+            
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("mousemove", function(e) {
+            let sparkle = document.createElement("div");
+            sparkle.className = "sparkle";
+            sparkle.style.left = e.pageX + "px";
+            sparkle.style.top = e.pageY + "px";
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 600);
+        });
+
+    </script>
+    
+</body>
 </html> 
