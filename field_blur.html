@@ -3,30 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Field Blur</title>
+    <title>Homework 3 – Field Blur</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <style>
+        /* Page Fade-In */
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f4ece7;
+            color: #444;
+            animation: fadeIn 1.2s ease-in-out;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #c7a4b6;
+            color: white;
+            border-bottom: 4px solid #b48ca1;
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: "Pinyon Script", cursive;
+            font-weight: 400;
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        /* Content Container */
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Card Styling */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform .3s ease, box-shadow .3s ease;
+            animation: fadeUp 1s ease forwards;
+            opacity: 0;
+        }
+
+        .card:nth-child(1) { animation-delay: .3s; }
+
+        @keyframes fadeUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Images */
+        img {
+            width: 500px;
+            max-width: 90%;
+            border-radius: 10px;
+            margin: 15px;
+            transition: 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Back Home Button */
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #b48ca1;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background .2s ease, transform .2s ease;
+            animation: fadeUp 1.2s ease;
+        }
+
+        a.button:hover {
+            background: #9f748b;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<style>
-      h1 {
-            color: rgb(11, 32, 76);
-          }
-            h2 {
-                color: rgb(188, 175, 240);
-            }
-            body{
-                background-color: rgba(230, 219, 187, 0.678);
-            }
-</style>
+
 <body>
-    <h1>
-            Homework 3
-        </h1>
-        <h2>
-            Field Blur Exercise
-        </h2>
-        <img src="fieldblurbef.jpeg" width="500">
-        <img src="fieldblur.jpg" width="500">
-        <br>
-        <a href="index.html"> Back to Home Page </a>
-    
+
+<header>
+    <h1>Homework 3</h1>
+    <h2>Field Blur Exercise</h2>
+</header>
+
+<div class="content">
+
+    <div class="card">
+        <h3 style="font-family:'Pinyon Script', cursive; color:#7a4f63; font-size:2rem; margin-top:0;">
+            Before & After
+        </h3>
+
+        <img src="fieldblurbef.jpeg" alt="Before Field Blur">
+        <img src="fieldblur.jpg" alt="After Field Blur">
+
+        <p style="line-height:1.6; font-size:1.05rem;">
+            This exercise demonstrates how field blur can be used to guide the viewer’s attention by softening the background while keeping the subject sharp.
+            The “before” image shows everything in equal focus, while the “after” image uses selective blur to create depth and visual emphasis.
+        </p>
+
+        <a href="index.html" class="button">Back to Home Page</a>
+    </div>
+
+</div>
+
 </body>
 </html>
