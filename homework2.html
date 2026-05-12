@@ -3,44 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework 2 </title>
-</head>
-    <style>
-        h1 {
-            color: rgb(41, 133, 25);
-          }
-            h2 {
-                color: rgb(239, 184, 19);
-            }
-            body{
-                background-color: bisque;
-            }
+    <title>Homework 2</title>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #ffe6f2;
+            color: #444;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #ffb3d9;
+            color: white;
+            border-bottom: 4px solid #ff99cc;
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: "Pinyon Script", cursive;
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            color: #ff4da6;
+            font-family: "Pinyon Script", cursive;
+            font-size: 2rem;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+            animation: fadeUp 1s ease forwards;
+            opacity: 0;
+        }
+
+        .card:nth-child(1) { animation-delay: .3s; }
+        .card:nth-child(2) { animation-delay: .6s; }
+
+        @keyframes fadeUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        figure { text-align: center; }
+        figcaption { color: #777; font-size: 0.9rem; margin-top: 5px; }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin: 15px 0;
+            transition: 0.4s ease;
+        }
+
+        img:hover { transform: scale(1.03); }
+
+        /* ⭐ BACK HOME BUTTON STYLE ⭐ */
+        .back-home {
+            display: inline-block;
+            margin: 40px auto 60px;
+            padding: 12px 28px;
+            background: #ff99cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+            border: 2px solid #ff4da6;
+        }
+
+        .back-home:hover {
+            background: #ff4da6;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(255, 77, 166, 0.3);
+        }
     </style>
+</head>
 
 <body>
-    <h1> Homework 2 </h1> 
-         <h2> Cropping and Resizing & Tonal Range </h2>
-         <h3> Movement and Stillness in Urban Life </h3>
-         <br> 
-        <image src="imageA.png" width="600"></image>
-        <br>
-        <p> This photograph presents a subway train in motion, capturing the fast-paced, routine nature of urban life. In the editing process, I increased the contrast and slightly lowered the saturation to produce a more restrained and realistic tone, reinforcing the industrial character of the setting. The off-center composition allows the train to appear as if it is moving beyond the frame, while the subtle blur in the background enhances the sense of motion. Together, these choices emphasize not only the physical movement
-            of the train but also the repetitive, almost mechanical rhythm of daily commuting. </p>
-        <br>
-        <h3>
-            Ordered Movement
-        </h3>
-        <br>
-        <image src="IMAGE B.png" width="600"></image>
-        <br>
-        <p>
-            This image focuses on a street intersection, using signage and street markings to represent structure and control within an urban environment. In editing, I enhanced the contrast and slightly warmed the tones to make the yellow traffic signals stand out against the muted grays of the pavement. The composition is vertically centered on the pole, allowing the intersecting street signs and directional arrows to guide the viewer’s eye throughout the frame. The repetition of lines in the crosswalk and road markings reinforces a sense of order and regulation. Overall, these choices emphasize how movement in the city is not random, but carefully directed and controlled.
-        </p>
-        <br>
-        <a href="index.html">Back to Home Page </a>
-            
-    </body>
-    
+
+<header>
+    <h1>Homework 2</h1>
+    <h2>Cropping and Resizing & Tonal Range</h2>
+</header>
+
+<div class="content">
+
+    <div class="card">
+        <h3>Movement and Stillness in Urban Life</h3>
+        <figure>
+            <img src="imageA.png" alt="Movement and Stillness">
+            <figcaption>Movement and Stillness Exercise</figcaption>
+        </figure>
+        <p>This photograph presents a subway train in motion, capturing the fast-paced, routine nature of urban life. In the editing process, I increased the contrast and slightly lowered the saturation to produce a more restrained and realistic tone, reinforcing the industrial character of the setting. The off-center composition allows the train to appear as if it is moving beyond the frame, while the subtle blur in the background enhances the sense of motion. Together, these choices emphasize not only the physical movement of the train but also the repetitive, almost mechanical rhythm of daily commuting.</p>
+    </div>
+
+    <div class="card">
+        <h3>Ordered Movement</h3>
+        <figure>
+            <img src="IMAGE B.png" alt="Ordered Movement">
+            <figcaption>Ordered Movement Exercise</figcaption>
+        </figure>
+        <p>This image focuses on a street intersection, using signage and street markings to represent structure and control within an urban environment. In editing, I enhanced the contrast and slightly warmed the tones to make the yellow traffic signals stand out against the muted grays of the pavement. The composition is vertically centered on the pole, allowing the intersecting street signs and directional arrows to guide the viewer’s eye throughout the frame. The repetition of lines in the crosswalk and road markings reinforces a sense of order and regulation. Overall, these choices emphasize how movement in the city is not random, but carefully directed and controlled.</p>
+    </div>
+
+    <!-- ⭐ BACK HOME BUTTON ⭐ -->
+    <div style="text-align:center;">
+        <a href="index.html" class="back-home">Back to Home Page</a>
+    </div>
+
+</div>
+
 </body>
 </html>
