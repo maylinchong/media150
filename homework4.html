@@ -3,42 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework 4</title>
-</head> 
-     <style>
-         h1 {
-            color:rgba(8, 129, 8, 0.767);
-          }
-            h2 {
-                color: lightpink;
-            }
-            h3 {
-                color:rgb(107, 128, 0)
-            }
-            body{
-                background-color: rgb(240, 228, 220);
-            }
-     </style>
+    <title>Homework 4 – Photomontage</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f4ece7;
+            color: #444;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #a8c79b;
+            color: white;
+            border-bottom: 4px solid #8fb883;
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: "Pinyon Script", cursive;
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        h3 {
+            color: #6d7f2c;
+            font-family: "Pinyon Script", cursive;
+            font-size: 2rem;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: fadeUp 1s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* FINAL IMAGE (moderate size) */
+        .hero-img {
+            width: 75%;
+            display: block;
+            margin: 0 auto 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* SIDE-BY-SIDE LAYOUT */
+        .side-by-side {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        /* LAYERS IMAGE (smaller but full image visible) */
+        .layers-img {
+            flex: 1;
+            min-width: 260px;
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* VIDEO (small box) */
+        .video-box {
+            flex: 1;
+            min-width: 260px;
+            max-width: 380px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .video-box video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* TEXT UNDER VIDEO */
+        .video-text {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #8fb883;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background .2s ease, transform .2s ease;
+        }
+
+        a:hover {
+            background: #769c6c;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
 
 <body>
-    <h1>
-        Homework 4
-    </h1>
-    <h2>
-        Social Campaign - Photomontage
-    </h2>
-    <h3>
-        All You Need Is Less
-    </h3>
-    <br>
-    <img src="Campaign.jpeg" width="500">
-    <br>
-    <p>
-        The concept of my photomontage explores overconsumption and consumer culture, especially in fashion and beauty. In modern society people are constantly encouraged to buy more products through advertisements, trends, and social media. Many of these purchases are unnecessary but they are marketed as things that will make people happier or more successful. In my composition I wanted to show how consumerism can become overwhelming. The person in the image looks shocked and surrounded by piles of clothing, shoes, makeup, and shopping bags that appear above her. These objects symbolize the pressure to constantly buy new things. The phrase “All you need is less” contrasts with the excess of products and suggests that reducing consumption may be better for both individuals and the environment.
-        To create this photomontage I used several Photoshop techniques such as layer masking, image isolation, and blending different elements together. I used layer masks to remove the backgrounds of the images and combine them into one composition without destroying the original images. I also experimented with scale and repetition by stacking and grouping many fashion and beauty products to emphasize excess and visual clutter. The contrast between the black and white figure and the colorful product images helps direct attention to the main subject. I also included graphic elements such as a receipt and a message asking “Do I really need this?” to reinforce the idea of questioning consumer habits. The images used in this project were collected from online free-use image sources and combined to create a visual commentary on overconsumption.
-    </p>
-    <a href="index.html"> Back to Home Page </a>
 
-    
+<header>
+    <h1>Homework 4</h1>
+    <h2>Social Campaign – Photomontage</h2>
+</header>
+
+<div class="content">
+
+    <div class="card">
+        <h3>All You Need Is Less</h3>
+
+        <!-- FINAL RESULT (moderate size) -->
+        <img src="Campaign.jpeg" alt="Final Photomontage" class="hero-img">
+
+        <!-- LAYERS LEFT + VIDEO RIGHT -->
+        <div class="side-by-side">
+
+            <!-- LEFT: LAYERS IMAGE -->
+            <img src="layers.png" alt="Layers Breakdown" class="layers-img">
+
+            <!-- RIGHT: VIDEO + TEXT -->
+            <div style="flex: 1; min-width: 260px; max-width: 380px;">
+                
+                <div class="video-box">
+                    <video controls>
+                        <source src="layers-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <p class="video-text">
+                    This short video shows the progression of my photomontage, revealing how each layer builds 
+                    the final composition. It highlights the masking, placement, and blending steps that bring 
+                    the concept together visually.
+                </p>
+
+            </div>
+        </div>
+
+        <p>
+            The concept of my photomontage explores overconsumption and consumer culture, especially in fashion and beauty. 
+            In modern society people are constantly encouraged to buy more products through advertisements, trends, and social media. 
+            Many of these purchases are unnecessary but they are marketed as things that will make people happier or more successful.
+            <br><br>
+            In my composition I wanted to show how consumerism can become overwhelming. The person in the image looks shocked and 
+            surrounded by piles of clothing, shoes, makeup, and shopping bags that appear above her. These objects symbolize the 
+            pressure to constantly buy new things. The phrase “All you need is less” contrasts with the excess of products and 
+            suggests that reducing consumption may be better for both individuals and the environment.
+            <br><br>
+            To create this photomontage I used several Photoshop techniques such as layer masking, image isolation, and blending 
+            different elements together. I used layer masks to remove the backgrounds of the images and combine them into one 
+            composition without destroying the original images. I also experimented with scale and repetition by stacking and 
+            grouping many fashion and beauty products to emphasize excess and visual clutter. The contrast between the black and 
+            white figure and the colorful product images helps direct attention to the main subject. I also included graphic 
+            elements such as a receipt and a message asking “Do I really need this?” to reinforce the idea of questioning consumer 
+            habits. The images used in this project were collected from online free-use image sources and combined to create a 
+            visual commentary on overconsumption.
+        </p>
+    </div>
+
+    <a href="index.html">Back to Home Page</a>
+
+</div>
+
 </body>
 </html>
