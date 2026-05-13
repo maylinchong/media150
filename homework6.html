@@ -3,34 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework 6</title>
+    <title>Homework 6 – Color & Pattern</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <style>
+        /* Page Fade-In */
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f6f5fa;
+            color: #444;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #b9a4d9;
+            color: white;
+            border-bottom: 4px solid #9b86c4;
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: "Pinyon Script", cursive;
+            font-weight: 400;
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #4a3b63;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Card Styling */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform .3s ease, box-shadow .3s ease;
+            animation: fadeUp 1s ease forwards;
+            opacity: 0;
+        }
+
+        .card:nth-child(1) { animation-delay: .3s; }
+
+        @keyframes fadeUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin: 15px 10px;
+            transition: transform .4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Button */
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #9b86c4;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background .2s ease, transform .2s ease;
+            animation: fadeUp 1.2s ease;
+        }
+
+        a:hover {
+            background: #7d6aa7;
+            transform: scale(1.05);
+        }
+
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    </style>
 </head>
-<style>
-       h1 {
-            color: rgb(120, 92, 155);
-          }
-            h2 {
-                color: rgb(56, 45, 80);
-            }
-            body{
-                background-color: rgb(248, 248, 249);
-            }
 
-</style>
 <body>
-    <p>
-        <h1>
-            Homework 6
-        </h1>
-        <h2>
-            Color and Pattern 
-        </h2>
-        <image src="pattern.PNG" width="500"></image>
-        <img src="t-shirt.JPG" width="300">
-        <br><br>
-        <a href="index.html"> Back to Home Page </a>
 
+<header>
+    <h1>Homework 6</h1>
+    <h2>Color and Pattern</h2>
+</header>
 
-    </p>
+<div class="content">
+
+    <div class="card">
+        <div class="image-row">
+            <img src="pattern.PNG" alt="Pattern Design">
+            <img src="t-shirt.JPG" alt="Pattern on T-Shirt">
+        </div>
+    </div>
+
+    <a href="index.html">Back to Home Page</a>
+
+</div>
+
 </body>
 </html>
